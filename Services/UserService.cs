@@ -32,5 +32,24 @@ namespace FitApp.App.Services
             var user = await response.Content.ReadFromJsonAsync<User>();
             return user;
         }
+
+        public async Task<bool> RegisterAsync(User user)
+        {
+            try
+            {
+                var response = await _httpClient.PostAsJsonAsync("user/register", user);
+
+                if (response.IsSuccessStatusCode)
+                    return true;
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Register error: {ex.Message}");
+                return false;
+            }
+        }
+
     }
 }

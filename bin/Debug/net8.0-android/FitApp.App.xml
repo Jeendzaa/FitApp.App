@@ -34,9 +34,59 @@
             Wyszukuje zlokalizowany ciąg podobny do ciągu fitAPP.
             </summary>
         </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.backButtonLink">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu BACK.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.createAccountChangeDateButton">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu choose date of birth.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.createAccountDatePlaceholder">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu 01/01/2001.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.createAccountEmailPlaceholder">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu email.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.createAccountHeightPlaceholder">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu height.
+            </summary>
+        </member>
         <member name="P:FitApp.App.Resources.Languages.AppResources.createAccountLink">
             <summary>
             Wyszukuje zlokalizowany ciąg podobny do ciągu create it here.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.createAccountLoginPlaceholder">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu login.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.createAccountPasswordPlaceholder">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu password.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.createAccountRegisterButton">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu register.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.createAccountTitle">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu CREATE ACCOUNT.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.createAccountWeightPlaceholder">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu weight.
             </summary>
         </member>
         <member name="P:FitApp.App.Resources.Languages.AppResources.dontHaveAccountText">
@@ -87,6 +137,7 @@
         <member name="T:FitApp.App.ViewModels.LoginViewModel">
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:FitApp.App.ViewModels.LoginViewModel.Email">
             <inheritdoc cref="F:FitApp.App.ViewModels.LoginViewModel.email"/>
@@ -99,6 +150,47 @@
         </member>
         <member name="P:FitApp.App.ViewModels.LoginViewModel.LoginCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FitApp.App.ViewModels.LoginViewModel.LoginAsync"/>.</summary>
+        </member>
+        <member name="F:FitApp.App.ViewModels.LoginViewModel.createAccountCommand">
+            <summary>The backing field for <see cref="P:FitApp.App.ViewModels.LoginViewModel.CreateAccountCommand"/>.</summary>
+        </member>
+        <member name="P:FitApp.App.ViewModels.LoginViewModel.CreateAccountCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FitApp.App.ViewModels.LoginViewModel.CreateAccountAsync"/>.</summary>
+        </member>
+        <member name="T:FitApp.App.ViewModels.RegisterViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:FitApp.App.ViewModels.RegisterViewModel.Login">
+            <inheritdoc cref="F:FitApp.App.ViewModels.RegisterViewModel.login"/>
+        </member>
+        <member name="P:FitApp.App.ViewModels.RegisterViewModel.Email">
+            <inheritdoc cref="F:FitApp.App.ViewModels.RegisterViewModel.email"/>
+        </member>
+        <member name="P:FitApp.App.ViewModels.RegisterViewModel.Password">
+            <inheritdoc cref="F:FitApp.App.ViewModels.RegisterViewModel.password"/>
+        </member>
+        <member name="P:FitApp.App.ViewModels.RegisterViewModel.DateOfBirth">
+            <inheritdoc cref="F:FitApp.App.ViewModels.RegisterViewModel.dateOfBirth"/>
+        </member>
+        <member name="P:FitApp.App.ViewModels.RegisterViewModel.Weight">
+            <inheritdoc cref="F:FitApp.App.ViewModels.RegisterViewModel.weight"/>
+        </member>
+        <member name="P:FitApp.App.ViewModels.RegisterViewModel.Height">
+            <inheritdoc cref="F:FitApp.App.ViewModels.RegisterViewModel.height"/>
+        </member>
+        <member name="F:FitApp.App.ViewModels.RegisterViewModel.registerCommand">
+            <summary>The backing field for <see cref="P:FitApp.App.ViewModels.RegisterViewModel.RegisterCommand"/>.</summary>
+        </member>
+        <member name="P:FitApp.App.ViewModels.RegisterViewModel.RegisterCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FitApp.App.ViewModels.RegisterViewModel.RegisterAsync"/>.</summary>
+        </member>
+        <member name="F:FitApp.App.ViewModels.RegisterViewModel.backToLoginPageCommand">
+            <summary>The backing field for <see cref="P:FitApp.App.ViewModels.RegisterViewModel.BackToLoginPageCommand"/>.</summary>
+        </member>
+        <member name="P:FitApp.App.ViewModels.RegisterViewModel.BackToLoginPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FitApp.App.ViewModels.RegisterViewModel.BackToLoginPageAsync"/>.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
             <summary>
@@ -118,6 +210,18 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Login">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Login" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DateOfBirth">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DateOfBirth" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Weight">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Weight" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Height">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Height" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -135,6 +239,18 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Login">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Login" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DateOfBirth">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DateOfBirth" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Weight">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Weight" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Height">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Height" generated properties.</summary>
         </member>
     </members>
 </doc>

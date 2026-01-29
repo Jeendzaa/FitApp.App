@@ -70,11 +70,101 @@ namespace FitApp.App.Resources.Languages {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu BACK.
+        /// </summary>
+        internal static string backButtonLink {
+            get {
+                return ResourceManager.GetString("backButtonLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu choose date of birth.
+        /// </summary>
+        internal static string createAccountChangeDateButton {
+            get {
+                return ResourceManager.GetString("createAccountChangeDateButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu 01/01/2001.
+        /// </summary>
+        internal static string createAccountDatePlaceholder {
+            get {
+                return ResourceManager.GetString("createAccountDatePlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu email.
+        /// </summary>
+        internal static string createAccountEmailPlaceholder {
+            get {
+                return ResourceManager.GetString("createAccountEmailPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu height.
+        /// </summary>
+        internal static string createAccountHeightPlaceholder {
+            get {
+                return ResourceManager.GetString("createAccountHeightPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu create it here.
         /// </summary>
         internal static string createAccountLink {
             get {
                 return ResourceManager.GetString("createAccountLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu login.
+        /// </summary>
+        internal static string createAccountLoginPlaceholder {
+            get {
+                return ResourceManager.GetString("createAccountLoginPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu password.
+        /// </summary>
+        internal static string createAccountPasswordPlaceholder {
+            get {
+                return ResourceManager.GetString("createAccountPasswordPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu register.
+        /// </summary>
+        internal static string createAccountRegisterButton {
+            get {
+                return ResourceManager.GetString("createAccountRegisterButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu CREATE ACCOUNT.
+        /// </summary>
+        internal static string createAccountTitle {
+            get {
+                return ResourceManager.GetString("createAccountTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu weight.
+        /// </summary>
+        internal static string createAccountWeightPlaceholder {
+            get {
+                return ResourceManager.GetString("createAccountWeightPlaceholder", resourceCulture);
             }
         }
         

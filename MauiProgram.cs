@@ -20,10 +20,15 @@ namespace FitApp.App
                 });
 
             builder.Services.AddHttpClient<UserService>();
+
             builder.Services.AddSingleton<UserService>();
             builder.Services.AddSingleton<LoginViewModel>();
+            builder.Services.AddSingleton<RegisterViewModel>();
+
+
             builder.Services.AddSingleton<LoginPage>();
             builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton<RegisterPage>();
 
 
 #if DEBUG

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitApp.App.Views.RegisterPage"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:res="clr-namespace:FitApp.App.Resources.Languages"
+             Title="RegisterPage">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#00AAFF" Offset="0.0"/>
+            <GradientStop Color="#003CFF" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout Padding="10">
+
+        <Grid ColumnDefinitions="1*, 4*">
+            <Label
+                Text="{x:Static res:AppResources.backButtonLink}"
+                HorizontalTextAlignment="Center"
+                FontFamily="JaroRegular"
+                FontSize="35"
+                TextColor="#A3C8FF"
+                Margin="0,30,0,0"
+                Grid.Column="0"
+                >
+
+                <Label.Shadow>
+                    <Shadow Brush="Black"
+                    Offset="0,5"
+                    Radius="3"
+                    Opacity="0.6"/>
+                </Label.Shadow>
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Command="{Binding BackToLoginPageCommand}"
+                        NumberOfTapsRequired="1"
+                        />
+                </Label.GestureRecognizers>
+
+            </Label>
+            <Label
+                Text="{x:Static res:AppResources.createAccountTitle}"
+                HorizontalTextAlignment="Center"
+                FontFamily="JaroRegular"
+                FontSize="35"
+                TextColor="#FFF"
+                Margin="0,30,0,0"
+                Grid.Column="1">
+
+                <Label.Shadow>
+                    <Shadow Brush="Black"
+                    Offset="0,5"
+                    Radius="3"
+                    Opacity="0.6"/>
+                </Label.Shadow>
+
+            </Label>
+        </Grid>
+
+        <Border
+            StrokeThickness="3"
+            StrokeShape="RoundRectangle 12"
+            Padding="0"
+            Margin="0,30,0,0">
+
+            <Border.Stroke>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#034067" Offset="0.0"/>
+                    <GradientStop Color="#5B9EFF" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Stroke>
+
+            <Border
+                BackgroundColor="#0162F4"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 12"
+                Padding="5">
+                <Entry
+                    Placeholder="{x:Static res:AppResources.createAccountLoginPlaceholder}"
+                    FontFamily="JaroRegular"
+                    FontSize="25"
+                    BackgroundColor="#0162F4"
+                    Text="{Binding Login}"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="#FFF"
+                    PlaceholderColor="#40FFFFFF"
+                    />
+            </Border>
+        </Border>
+
+        <Border
+            StrokeThickness="3"
+            StrokeShape="RoundRectangle 12"
+            Padding="0"
+            Margin="0,30,0,0">
+
+            <Border.Stroke>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#034067" Offset="0.0"/>
+                    <GradientStop Color="#5B9EFF" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Stroke>
+
+            <Border
+                BackgroundColor="#0162F4"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 12"
+                Padding="5">
+                <Entry
+                    Placeholder="{x:Static res:AppResources.createAccountEmailPlaceholder}"
+                    FontFamily="JaroRegular"
+                    FontSize="25"
+                    BackgroundColor="#0162F4"
+                    Text="{Binding Email}"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="#FFF"
+                    PlaceholderColor="#40FFFFFF"
+                    />
+            </Border>
+        </Border>
+
+        <Border
+            StrokeThickness="3"
+            StrokeShape="RoundRectangle 12"
+            Padding="0"
+            Margin="0,30,0,0">
+
+            <Border.Stroke>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#034067" Offset="0.0"/>
+                    <GradientStop Color="#5B9EFF" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Stroke>
+
+            <Border
+                BackgroundColor="#0162F4"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 12"
+                Padding="5">
+                <Entry
+                    Placeholder="{x:Static res:AppResources.createAccountPasswordPlaceholder}"
+                    FontFamily="JaroRegular"
+                    FontSize="25"
+                    BackgroundColor="#0162F4"
+                    Text="{Binding Password}"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="#FFF"
+                    PlaceholderColor="#40FFFFFF"
+                    IsPassword="True"
+                    />
+            </Border>
+        </Border>
+
+        <Border
+            StrokeThickness="3"
+            StrokeShape="RoundRectangle 12"
+            Padding="0"
+            Margin="0,30,0,0">
+
+            <Border.Stroke>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#034067" Offset="0.0"/>
+                    <GradientStop Color="#5B9EFF" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Stroke>
+
+            <Border
+                BackgroundColor="#0162F4"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 12"
+                Padding="5">
+
+                <DatePicker
+                    Date="{Binding DateOfBirth}"
+                    Format="dd/MM/yyyy"
+                    FontFamily="JaroRegular"
+                    FontSize="25"
+                    BackgroundColor="#0162F4"
+                    TextColor="#FFF"
+                    HorizontalOptions="Center"
+                    />
+                
+            </Border>
+        </Border>
+
+        <Grid ColumnDefinitions="1*, 1*">
+            <Border
+            StrokeThickness="3"
+            StrokeShape="RoundRectangle 12"
+            Padding="0"
+            Margin="5,30,5,0"
+            Grid.Column="0">
+
+                <Border.Stroke>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#034067" Offset="0.0"/>
+                        <GradientStop Color="#5B9EFF" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Border.Stroke>
+
+                <Border
+                BackgroundColor="#0162F4"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 12"
+                Padding="5">
+                    <Entry
+                    Placeholder="{x:Static res:AppResources.createAccountWeightPlaceholder}"
+                    FontFamily="JaroRegular"
+                    FontSize="25"
+                    BackgroundColor="#0162F4"
+                    Text="{Binding Weight}"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="#FFF"
+                    PlaceholderColor="#40FFFFFF"
+                    Keyboard="Numeric"
+                    />
+                </Border>
+            </Border>
+
+            <Border
+            StrokeThickness="3"
+            StrokeShape="RoundRectangle 12"
+            Padding="0"
+            Margin="5,30,5,0"
+            Grid.Column="1">
+
+                <Border.Stroke>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#034067" Offset="0.0"/>
+                        <GradientStop Color="#5B9EFF" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Border.Stroke>
+
+                <Border
+                BackgroundColor="#0162F4"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 12"
+                Padding="5">
+                    <Entry
+                    Placeholder="{x:Static res:AppResources.createAccountHeightPlaceholder}"
+                    FontFamily="JaroRegular"
+                    FontSize="25"
+                    BackgroundColor="#0162F4"
+                    Text="{Binding Height}"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    TextColor="#FFF"
+                    PlaceholderColor="#40FFFFFF"
+                    Keyboard="Numeric"
+                    />
+                </Border>
+            </Border>
+        </Grid>
+
+        <Border
+            StrokeThickness="3"
+            StrokeShape="RoundRectangle 16"
+            Padding="0"
+            Margin="60,30,60,0">
+
+            <Border.Stroke>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#034067" Offset="0.0"/>
+                    <GradientStop Color="#5B9EFF" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Stroke>
+
+            <Border
+                BackgroundColor="#002679"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 16"
+                Padding="5">
+
+                <Button 
+                    Text="{x:Static res:AppResources.createAccountRegisterButton}"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    FontFamily="JaroRegular"
+                    FontSize="26"
+                    Command="{Binding RegisterCommand}"
+                    />
+            </Border>
+        </Border>
+
+    </VerticalStackLayout>
+</ContentPage>

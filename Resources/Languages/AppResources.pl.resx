@@ -150,4 +150,34 @@
   <data name="loginExceptionError" xml:space="preserve">
     <value>Wystąpił błąd podczas logowania.</value>
   </data>
+  <data name="createAccountTitle" xml:space="preserve">
+    <value>STWÓRZ KONTO</value>
+  </data>
+  <data name="createAccountLoginPlaceholder" xml:space="preserve">
+    <value>login</value>
+  </data>
+  <data name="createAccountEmailPlaceholder" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="createAccountPasswordPlaceholder" xml:space="preserve">
+    <value>hasło</value>
+  </data>
+  <data name="createAccountDatePlaceholder" xml:space="preserve">
+    <value>01/01/2001</value>
+  </data>
+  <data name="createAccountWeightPlaceholder" xml:space="preserve">
+    <value>waga</value>
+  </data>
+  <data name="createAccountHeightPlaceholder" xml:space="preserve">
+    <value>wzrost</value>
+  </data>
+  <data name="backButtonLink" xml:space="preserve">
+    <value>WRÓĆ</value>
+  </data>
+  <data name="createAccountChangeDateButton" xml:space="preserve">
+    <value>zmień datę urodzenia</value>
+  </data>
+  <data name="createAccountRegisterButton" xml:space="preserve">
+    <value>zarejestruj</value>
+  </data>
 </root>

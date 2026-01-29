@@ -12,4 +12,8 @@
     <ShellContent
         Route="MainPage"
         ContentTemplate="{DataTemplate views:MainPage}" />
+
+    <ShellContent
+        Route="RegisterPage"
+        ContentTemplate="{DataTemplate views:RegisterPage}"/>
 </Shell>

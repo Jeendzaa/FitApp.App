@@ -533,7 +533,6 @@ C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\assets\
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\assets\zh-Hant\Microsoft.Maui.Controls.resources.dll
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\assets\zh-HK\Microsoft.Maui.Controls.resources.dll
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\assets\_Microsoft.Android.Resource.Designer.dll
-C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\typemaps.x86_64.ll
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\AndroidManifest.xml
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\AndroidManifest.xml
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\src\mono\MonoRuntimeProvider.java
@@ -543,7 +542,6 @@ C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\bin\mon
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\static.flag
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\__environment__.txt
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\buildid.txt
-C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\environment.x86_64.ll
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\src\androidx\activity\ktx\R.java
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\src\androidx\activity\R.java
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\src\androidx\annotation\experimental\R.java
@@ -1042,13 +1040,6 @@ C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\src\mon
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\bin\packaged_resources
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\src\com\companyname\fitapp\app\R.java
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\_CompileJava.FileList.txt
-C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\compressed_assemblies.x86_64.ll
-C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\typemaps.x86_64.o
-C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\environment.x86_64.o
-C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\compressed_assemblies.x86_64.o
-C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\marshal_methods.x86_64.o
-C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\jni_remap.x86_64.o
-C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\app_shared_libraries\x86_64\libxamarin-app.so
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\bin\classes.dex
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\bin\classes2.dex
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\stamp\_CleanIntermediateIfNeeded.stamp
@@ -1059,3 +1050,13 @@ C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\stamp\_ConvertR
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\FitApp.App.sourcelink.json
+C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\typemaps.arm64-v8a.ll
+C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\environment.arm64-v8a.ll
+C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\compressed_assemblies.arm64-v8a.ll
+C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\typemaps.arm64-v8a.o
+C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\environment.arm64-v8a.o
+C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\compressed_assemblies.arm64-v8a.o
+C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\marshal_methods.arm64-v8a.o
+C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\android\jni_remap.arm64-v8a.o
+C:\Users\rojje\Documents\inz\FitApp.App\obj\Debug\net8.0-android\app_shared_libraries\arm64-v8a\libxamarin-app.so

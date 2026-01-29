@@ -61,5 +61,12 @@ namespace FitApp.App.ViewModels
                 IsBusy = false;
             }
         }
+
+        [RelayCommand]
+        private async Task CreateAccountAsync()
+        {
+            await Shell.Current.GoToAsync("//RegisterPage");
+        }
+
     }
 }
