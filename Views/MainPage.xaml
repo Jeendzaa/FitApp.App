@@ -2,15 +2,153 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FitApp.App.Views.MainPage"
+             xmlns:res="clr-namespace:FitApp.App.Resources.Languages"
+             NavigationPage.HasNavigationBar="False"
              Title="MainPage">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#00AAFF" Offset="0.0"/>
+            <GradientStop Color="#003CFF" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
 
-            />
+        <Label
+            FontSize="50"
+            TextColor="#FFF"
+            FontFamily="JaroRegular"
+            Margin="15,15,0,0">
 
-        <Button Text="logout"             Clicked="OnLogoutClicked"/>
+            <Label.Text>
+                <MultiBinding StringFormat="{}{0} {1}">
+                    <Binding Source="{x:Static res:AppResources.mainPageHello}"/>
+                    <Binding Path="UserName"/>
+                </MultiBinding>
+            </Label.Text>
+
+            <Label.Shadow>
+                <Shadow Brush="Black"
+                        Offset="0,5"
+                        Radius="3"
+                        Opacity="0.6"/>
+            </Label.Shadow>
+        </Label>
+
+        <Border
+            StrokeThickness="3"
+            StrokeShape="RoundRectangle 12"
+            Padding="0"
+            Margin="50,20,50,0">
+
+            <Border.Stroke>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#034067" Offset="0.0"/>
+                    <GradientStop Color="#5B9EFF" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Stroke>
+
+            <Border
+                BackgroundColor="#0162F4"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 12"
+                Padding="5">
+
+                <FlexLayout
+                    Direction="Row"
+                    Wrap="Wrap"
+                    JustifyContent="Center"
+                    AlignItems="Center"
+                    AlignContent="Center">
+
+                    <!-- Calories eaten -->
+                    <VerticalStackLayout FlexLayout.Basis="50%" Spacing="2">
+                        <Label
+                            Text="{Binding CaloriesEaten, StringFormat='{}{0} kcal'}"
+                            FontSize="36"
+                            FontFamily="JaroRegular"
+                            TextColor="#FFF"
+                            HorizontalTextAlignment="Center"/>
+                                        <Label
+                            Text="eaten"
+                            FontSize="14"
+                            FontFamily="JaroRegular"
+                            TextColor="#CCC"
+                            HorizontalTextAlignment="Center"/>
+                    </VerticalStackLayout>
+
+                    <!-- Calories left -->
+                    <VerticalStackLayout FlexLayout.Basis="50%" Spacing="2">
+                        <Label
+                            Text="{Binding CaloriesLeft, StringFormat='{}{0} kcal'}"
+                            FontSize="36"
+                            FontFamily="JaroRegular"
+                            TextColor="#FFF"
+                            HorizontalTextAlignment="Center"/>
+                                        <Label
+                            Text="left"
+                            FontSize="14"
+                            FontFamily="JaroRegular"
+                            TextColor="#CCC"
+                            HorizontalTextAlignment="Center"/>
+                    </VerticalStackLayout>
+
+                    <!-- Carbs -->
+                    <VerticalStackLayout FlexLayout.Basis="33%" Spacing="2">
+                        <Label
+                            Text="{Binding Carbon, StringFormat='{}{0} g'}"
+                            FontSize="30"
+                            FontFamily="JaroRegular"
+                            TextColor="#FFF"
+                            HorizontalTextAlignment="Center"/>
+                                        <Label
+                            Text="carbs"
+                            FontSize="13"
+                            FontFamily="JaroRegular"
+                            TextColor="#CCC"
+                            HorizontalTextAlignment="Center"/>
+                    </VerticalStackLayout>
+
+                    <!-- Protein -->
+                    <VerticalStackLayout FlexLayout.Basis="33%" Spacing="2">
+                        <Label
+                            Text="{Binding Protein, StringFormat='{}{0} g'}"
+                            FontSize="30"
+                            FontFamily="JaroRegular"
+                            TextColor="#FFF"
+                            HorizontalTextAlignment="Center"/>
+                                        <Label
+                            Text="protein"
+                            FontSize="13"
+                            FontFamily="JaroRegular"
+                            TextColor="#CCC"
+                            HorizontalTextAlignment="Center"/>
+                    </VerticalStackLayout>
+
+                    <!-- Fat -->
+                    <VerticalStackLayout FlexLayout.Basis="33%" Spacing="2">
+                        <Label
+                            Text="{Binding Fat, StringFormat='{}{0} g'}"
+                            FontSize="30"
+                            FontFamily="JaroRegular"
+                            TextColor="#FFF"
+                            HorizontalTextAlignment="Center"/>
+                                        <Label
+                            Text="fat"
+                            FontSize="13"
+                            FontFamily="JaroRegular"
+                            TextColor="#CCC"
+                            HorizontalTextAlignment="Center"/>
+                    </VerticalStackLayout>
+
+                </FlexLayout>
+
+            </Border>
+        </Border>
+
+        <Button Text="logout"            
+                Clicked="OnLogoutClicked"/>
     </VerticalStackLayout>
+    
 </ContentPage>

@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FitApp.App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+997c0f5c9118a36cdb4aff76ba57e1c36e6b8c2f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+e2046381862eff55c150ed6405c5bd578fe91ab5")]
 [assembly: System.Reflection.AssemblyProductAttribute("FitApp.App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FitApp.App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
