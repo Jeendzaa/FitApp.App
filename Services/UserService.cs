@@ -51,5 +51,17 @@ namespace FitApp.App.Services
             }
         }
 
+        public async Task<User?> GetUserByIdAsync(int userId)
+        {
+            var response = await _httpClient.GetAsync($"user/id?id={userId}");
+
+            if (!response.IsSuccessStatusCode)
+                return null;
+
+            return await response.Content.ReadFromJsonAsync<User>();
+        }
+
+
+
     }
 }

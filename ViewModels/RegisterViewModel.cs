@@ -63,6 +63,15 @@ namespace FitApp.App.ViewModels
             double heightMeters = parsedHeight / 100.0;
             int bmi = (int)(parsedWeight / (heightMeters * heightMeters));
 
+            int age = DateTime.Today.Year - DateOfBirth.Year;
+            if (DateOfBirth.Date > DateTime.Today.AddYears(-age)) age--;
+
+            double bmr = 10 * parsedWeight + 6.25 * parsedHeight - 5 * age;
+
+            double activity = 1.4;
+
+            int dailyCalories = (int)(bmr * activity);
+
             var newUser = new User
             {
                 UserName = Login,
@@ -70,7 +79,8 @@ namespace FitApp.App.ViewModels
                 UserPassword = Password,
                 UserDateOfBirth = DateOfBirth,
                 UserCurrentWeight = parsedWeight,
-                UserBmi = bmi
+                UserBmi = bmi,
+                DailyCalorieGoal = dailyCalories
             };
 
             var success = await _userService.RegisterAsync(newUser);

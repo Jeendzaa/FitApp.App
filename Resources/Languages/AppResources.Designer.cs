@@ -241,6 +241,60 @@ namespace FitApp.App.Resources.Languages {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu carbon.
+        /// </summary>
+        internal static string mainPageCarbon {
+            get {
+                return ResourceManager.GetString("mainPageCarbon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu eaten.
+        /// </summary>
+        internal static string mainPageEaten {
+            get {
+                return ResourceManager.GetString("mainPageEaten", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu fat.
+        /// </summary>
+        internal static string mainPageFat {
+            get {
+                return ResourceManager.GetString("mainPageFat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu hello.
+        /// </summary>
+        internal static string mainPageHello {
+            get {
+                return ResourceManager.GetString("mainPageHello", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu left.
+        /// </summary>
+        internal static string mainPageLeft {
+            get {
+                return ResourceManager.GetString("mainPageLeft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu protein.
+        /// </summary>
+        internal static string mainPageProtein {
+            get {
+                return ResourceManager.GetString("mainPageProtein", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu password.
         /// </summary>
         internal static string passwordPlaceholder {

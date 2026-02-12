@@ -180,4 +180,22 @@
   <data name="createAccountRegisterButton" xml:space="preserve">
     <value>zarejestruj</value>
   </data>
+  <data name="mainPageHello" xml:space="preserve">
+    <value>witaj</value>
+  </data>
+  <data name="mainPageEaten" xml:space="preserve">
+    <value>zjedzono</value>
+  </data>
+  <data name="mainPageLeft" xml:space="preserve">
+    <value>zostało</value>
+  </data>
+  <data name="mainPageCarbon" xml:space="preserve">
+    <value>węglowodany</value>
+  </data>
+  <data name="mainPageProtein" xml:space="preserve">
+    <value>białko</value>
+  </data>
+  <data name="mainPageFat" xml:space="preserve">
+    <value>tłuszcze</value>
+  </data>
 </root>

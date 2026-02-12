@@ -9,6 +9,7 @@
         public DateTime UserDateOfBirth { get; set; }
         public int UserCurrentWeight { get; set; }
         public int UserBmi { get; set; }
+        public int DailyCalorieGoal { get; set; }
     }
 
     public class LoginRequest
