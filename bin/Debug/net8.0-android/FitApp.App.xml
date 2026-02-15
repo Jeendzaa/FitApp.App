@@ -39,6 +39,16 @@
             Wyszukuje zlokalizowany ciąg podobny do ciągu BACK.
             </summary>
         </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.changeWaterInfo">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu Enter the amount of water in millilitres.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.changeWeightButton">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu Change weight.
+            </summary>
+        </member>
         <member name="P:FitApp.App.Resources.Languages.AppResources.createAccountChangeDateButton">
             <summary>
             Wyszukuje zlokalizowany ciąg podobny do ciągu choose date of birth.
@@ -129,6 +139,11 @@
             Wyszukuje zlokalizowany ciąg podobny do ciągu login/email.
             </summary>
         </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.logout">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu logout.
+            </summary>
+        </member>
         <member name="P:FitApp.App.Resources.Languages.AppResources.mainPageCarbon">
             <summary>
             Wyszukuje zlokalizowany ciąg podobny do ciągu carbon.
@@ -154,14 +169,79 @@
             Wyszukuje zlokalizowany ciąg podobny do ciągu left.
             </summary>
         </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.mainPageMeals">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu MEALS.
+            </summary>
+        </member>
         <member name="P:FitApp.App.Resources.Languages.AppResources.mainPageProtein">
             <summary>
             Wyszukuje zlokalizowany ciąg podobny do ciągu protein.
             </summary>
         </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.mealPageAddMealSucces">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu Success.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.mealPageAddMealSuccesAdded">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu Meal added.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.mealPageBack">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu BACK.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.mealPageCalories">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu Calories.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.mealPageHowManyText">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu How many portions of.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.mealPageQuantity">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu Quantity.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.mealPageSearchMeal">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu Search meals....
+            </summary>
+        </member>
         <member name="P:FitApp.App.Resources.Languages.AppResources.passwordPlaceholder">
             <summary>
             Wyszukuje zlokalizowany ciąg podobny do ciągu password.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.settingsPageCalories">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu Your calorie goal is:.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.settingsPageTitle">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu Settings.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.settingsPageWeight">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu You weigh.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.waterChangeBtn">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu ADD.
+            </summary>
+        </member>
+        <member name="P:FitApp.App.Resources.Languages.AppResources.waterText">
+            <summary>
+            Wyszukuje zlokalizowany ciąg podobny do ciągu WATER.
             </summary>
         </member>
         <member name="T:FitApp.App.ViewModels.LoginViewModel">
@@ -189,6 +269,12 @@
         </member>
         <member name="T:FitApp.App.ViewModels.MainPageViewModel">
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:FitApp.App.ViewModels.MainPageViewModel.Meals">
+            <inheritdoc cref="F:FitApp.App.ViewModels.MainPageViewModel.meals"/>
         </member>
         <member name="P:FitApp.App.ViewModels.MainPageViewModel.CaloriesEaten">
             <inheritdoc cref="F:FitApp.App.ViewModels.MainPageViewModel.caloriesEaten"/>
@@ -205,14 +291,58 @@
         <member name="P:FitApp.App.ViewModels.MainPageViewModel.Fat">
             <inheritdoc cref="F:FitApp.App.ViewModels.MainPageViewModel.fat"/>
         </member>
+        <member name="P:FitApp.App.ViewModels.MainPageViewModel.WaterConsumed">
+            <inheritdoc cref="F:FitApp.App.ViewModels.MainPageViewModel.waterConsumed"/>
+        </member>
         <member name="P:FitApp.App.ViewModels.MainPageViewModel.IsBusy">
             <inheritdoc cref="F:FitApp.App.ViewModels.MainPageViewModel.isBusy"/>
         </member>
         <member name="P:FitApp.App.ViewModels.MainPageViewModel.UserName">
             <inheritdoc cref="F:FitApp.App.ViewModels.MainPageViewModel.userName"/>
         </member>
+        <member name="P:FitApp.App.ViewModels.MainPageViewModel.ActualDailyDate">
+            <inheritdoc cref="F:FitApp.App.ViewModels.MainPageViewModel.actualDailyDate"/>
+        </member>
         <member name="P:FitApp.App.ViewModels.MainPageViewModel.CurrentDaily">
             <inheritdoc cref="F:FitApp.App.ViewModels.MainPageViewModel.currentDaily"/>
+        </member>
+        <member name="F:FitApp.App.ViewModels.MainPageViewModel.changeWaterCommand">
+            <summary>The backing field for <see cref="P:FitApp.App.ViewModels.MainPageViewModel.ChangeWaterCommand"/>.</summary>
+        </member>
+        <member name="P:FitApp.App.ViewModels.MainPageViewModel.ChangeWaterCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FitApp.App.ViewModels.MainPageViewModel.ChangeWater"/>.</summary>
+        </member>
+        <member name="F:FitApp.App.ViewModels.MainPageViewModel.openSettingsPageCommand">
+            <summary>The backing field for <see cref="P:FitApp.App.ViewModels.MainPageViewModel.OpenSettingsPageCommand"/>.</summary>
+        </member>
+        <member name="P:FitApp.App.ViewModels.MainPageViewModel.OpenSettingsPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FitApp.App.ViewModels.MainPageViewModel.OpenSettingsPage"/>.</summary>
+        </member>
+        <member name="F:FitApp.App.ViewModels.MainPageViewModel.openMealsPageCommand">
+            <summary>The backing field for <see cref="P:FitApp.App.ViewModels.MainPageViewModel.OpenMealsPageCommand"/>.</summary>
+        </member>
+        <member name="P:FitApp.App.ViewModels.MainPageViewModel.OpenMealsPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FitApp.App.ViewModels.MainPageViewModel.OpenMealsPage"/>.</summary>
+        </member>
+        <member name="T:FitApp.App.ViewModels.MealsPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:FitApp.App.ViewModels.MealsPageViewModel.SearchText">
+            <inheritdoc cref="F:FitApp.App.ViewModels.MealsPageViewModel.searchText"/>
+        </member>
+        <member name="F:FitApp.App.ViewModels.MealsPageViewModel.searchMealsCommand">
+            <summary>The backing field for <see cref="P:FitApp.App.ViewModels.MealsPageViewModel.SearchMealsCommand"/>.</summary>
+        </member>
+        <member name="P:FitApp.App.ViewModels.MealsPageViewModel.SearchMealsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FitApp.App.ViewModels.MealsPageViewModel.SearchMealsAsync"/>.</summary>
+        </member>
+        <member name="F:FitApp.App.ViewModels.MealsPageViewModel.addMealCommand">
+            <summary>The backing field for <see cref="P:FitApp.App.ViewModels.MealsPageViewModel.AddMealCommand"/>.</summary>
+        </member>
+        <member name="P:FitApp.App.ViewModels.MealsPageViewModel.AddMealCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:FitApp.App.ViewModels.MealsPageViewModel.AddMealAsync(FitApp.App.Models.DTO.MealDto)"/>.</summary>
         </member>
         <member name="T:FitApp.App.ViewModels.RegisterViewModel">
             <inheritdoc/>
@@ -249,6 +379,155 @@
         <member name="P:FitApp.App.ViewModels.RegisterViewModel.BackToLoginPageCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FitApp.App.ViewModels.RegisterViewModel.BackToLoginPageAsync"/>.</summary>
         </member>
+        <member name="T:FitApp.App.ViewModels.SettingsPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:FitApp.App.ViewModels.SettingsPageViewModel.UserName">
+            <inheritdoc cref="F:FitApp.App.ViewModels.SettingsPageViewModel.userName"/>
+        </member>
+        <member name="P:FitApp.App.ViewModels.SettingsPageViewModel.Calories">
+            <inheritdoc cref="F:FitApp.App.ViewModels.SettingsPageViewModel.calories"/>
+        </member>
+        <member name="P:FitApp.App.ViewModels.SettingsPageViewModel.UserWeight">
+            <inheritdoc cref="F:FitApp.App.ViewModels.SettingsPageViewModel.userWeight"/>
+        </member>
+        <member name="P:FitApp.App.ViewModels.SettingsPageViewModel.IsBusy">
+            <inheritdoc cref="F:FitApp.App.ViewModels.SettingsPageViewModel.isBusy"/>
+        </member>
+        <member name="F:FitApp.App.ViewModels.SettingsPageViewModel.changeWeightCommand">
+            <summary>The backing field for <see cref="P:FitApp.App.ViewModels.SettingsPageViewModel.ChangeWeightCommand"/>.</summary>
+        </member>
+        <member name="P:FitApp.App.ViewModels.SettingsPageViewModel.ChangeWeightCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FitApp.App.ViewModels.SettingsPageViewModel.ChangeWeight"/>.</summary>
+        </member>
+        <member name="F:FitApp.App.ViewModels.SettingsPageViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:FitApp.App.ViewModels.SettingsPageViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:FitApp.App.ViewModels.SettingsPageViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FitApp.App.ViewModels.SettingsPageViewModel.GoBack"/>.</summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_DatePicker.TextColorTo(Microsoft.Maui.Controls.DatePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Editor.TextColorTo(Microsoft.Maui.Controls.Editor,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Entry.TextColorTo(Microsoft.Maui.Controls.Entry,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_InputView.TextColorTo(Microsoft.Maui.Controls.InputView,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Label.TextColorTo(Microsoft.Maui.Controls.Label,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Picker.TextColorTo(Microsoft.Maui.Controls.Picker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_RadioButton.TextColorTo(Microsoft.Maui.Controls.RadioButton,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_SearchBar.TextColorTo(Microsoft.Maui.Controls.SearchBar,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_TimePicker.TextColorTo(Microsoft.Maui.Controls.TimePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
@@ -267,6 +546,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Meals">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Meals" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CaloriesEaten">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CaloriesEaten" generated properties.</summary>
         </member>
@@ -282,11 +564,20 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Fat">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Fat" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.WaterConsumed">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "WaterConsumed" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserName">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserName" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ActualDailyDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ActualDailyDate" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentDaily">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentDaily" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SearchText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SearchText" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Login">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Login" generated properties.</summary>
@@ -299,6 +590,12 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Height">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Height" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Calories">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Calories" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserWeight">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserWeight" generated properties.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
@@ -318,6 +615,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Meals">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Meals" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CaloriesEaten">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CaloriesEaten" generated properties.</summary>
         </member>
@@ -333,11 +633,20 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Fat">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Fat" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.WaterConsumed">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "WaterConsumed" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserName">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserName" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ActualDailyDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ActualDailyDate" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentDaily">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentDaily" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SearchText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SearchText" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Login">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Login" generated properties.</summary>
@@ -350,6 +659,12 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Height">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Height" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Calories">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Calories" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserWeight">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserWeight" generated properties.</summary>
         </member>
     </members>
 </doc>

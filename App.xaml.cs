@@ -1,5 +1,6 @@
 ﻿using Microsoft.Maui.Storage;
 using FitApp.App.Views;
+using FitApp.App.Services;
 
 namespace FitApp.App
 {

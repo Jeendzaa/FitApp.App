@@ -1,48 +1,57 @@
 ﻿using System.Net.Http.Json;
-using FitApp.App.Models;
 using FitApp.App.Models.DTO;
 
-public class DailyService
+namespace FitApp.App.Services
 {
-    private readonly HttpClient _http;
-
-    public DailyService(HttpClient http)
+    public class DailyService
     {
-        _http = http;
-        _http.BaseAddress = new Uri("https://fitappapi.azurewebsites.net/api/");
-    }
+        private readonly HttpClient _http;
 
-    public async Task<int?> CreateDailyAsync(int userId, DateTime date)
-    {
-        var dto = new CreateDailyReportDto
+        public DailyService(HttpClient http)
         {
-            UserId = userId,
-            DailyReportDate = date.Date
-        };
-
-        var response = await _http.PostAsJsonAsync("daily", dto);
-
-        if (!response.IsSuccessStatusCode)
-        {
-            var err = await response.Content.ReadAsStringAsync();
-            Console.WriteLine(err);
-            return null;
+            _http = http;
+            _http.BaseAddress = new Uri("https://fitappapi.azurewebsites.net/api/");
         }
 
-        var result = await response.Content.ReadFromJsonAsync<DailyReport>();
-        return result?.Id;
+        public async Task<DailyReportDto?> GetDailyByDateAsync(int userId, DateTime date)
+        {
+            var res = await _http.GetAsync(
+                $"daily/user/{userId}/date/{date:yyyy-MM-dd}");
+
+            if (res.StatusCode == System.Net.HttpStatusCode.NotFound)
+                return null;
+
+            if (!res.IsSuccessStatusCode)
+                return null;
+
+            return await res.Content.ReadFromJsonAsync<DailyReportDto>();
+        }
+
+        public async Task<int?> CreateDailyAsync(int userId, DateTime date)
+        {
+            var dto = new
+            {
+                UserId = userId,
+                DailyReportDate = date.Date
+            };
+
+            var response = await _http.PostAsJsonAsync("daily", dto);
+
+            if (!response.IsSuccessStatusCode)
+                return null;
+
+            return await response.Content.ReadFromJsonAsync<int>();
+        }
+        public async Task<bool> UpdateWaterAsync(int id, double water)
+        {
+            var body = new
+            {
+                DailyReportWater = water
+            };
+
+            var response = await _http.PutAsJsonAsync($"daily/{id}/water", body);
+
+            return response.IsSuccessStatusCode;
+        }
     }
-
-    public async Task<DailyReport?> GetDailyByDateAsync(int userId, DateTime date)
-    {
-        var res = await _http.GetAsync(
-            $"daily/user/{userId}/date/{date:yyyy-MM-dd}");
-
-        if (!res.IsSuccessStatusCode)
-            return null;
-
-        return await res.Content.ReadFromJsonAsync<DailyReport>();
-    }
-
-
 }

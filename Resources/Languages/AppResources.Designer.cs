@@ -79,6 +79,24 @@ namespace FitApp.App.Resources.Languages {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Enter the amount of water in millilitres.
+        /// </summary>
+        internal static string changeWaterInfo {
+            get {
+                return ResourceManager.GetString("changeWaterInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Change weight.
+        /// </summary>
+        internal static string changeWeightButton {
+            get {
+                return ResourceManager.GetString("changeWeightButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu choose date of birth.
         /// </summary>
         internal static string createAccountChangeDateButton {
@@ -241,6 +259,15 @@ namespace FitApp.App.Resources.Languages {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu logout.
+        /// </summary>
+        internal static string logout {
+            get {
+                return ResourceManager.GetString("logout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu carbon.
         /// </summary>
         internal static string mainPageCarbon {
@@ -286,6 +313,15 @@ namespace FitApp.App.Resources.Languages {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu MEALS.
+        /// </summary>
+        internal static string mainPageMeals {
+            get {
+                return ResourceManager.GetString("mainPageMeals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu protein.
         /// </summary>
         internal static string mainPageProtein {
@@ -295,11 +331,119 @@ namespace FitApp.App.Resources.Languages {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Success.
+        /// </summary>
+        internal static string mealPageAddMealSucces {
+            get {
+                return ResourceManager.GetString("mealPageAddMealSucces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Meal added.
+        /// </summary>
+        internal static string mealPageAddMealSuccesAdded {
+            get {
+                return ResourceManager.GetString("mealPageAddMealSuccesAdded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu BACK.
+        /// </summary>
+        internal static string mealPageBack {
+            get {
+                return ResourceManager.GetString("mealPageBack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Calories.
+        /// </summary>
+        internal static string mealPageCalories {
+            get {
+                return ResourceManager.GetString("mealPageCalories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu How many portions of.
+        /// </summary>
+        internal static string mealPageHowManyText {
+            get {
+                return ResourceManager.GetString("mealPageHowManyText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Quantity.
+        /// </summary>
+        internal static string mealPageQuantity {
+            get {
+                return ResourceManager.GetString("mealPageQuantity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Search meals....
+        /// </summary>
+        internal static string mealPageSearchMeal {
+            get {
+                return ResourceManager.GetString("mealPageSearchMeal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu password.
         /// </summary>
         internal static string passwordPlaceholder {
             get {
                 return ResourceManager.GetString("passwordPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Your calorie goal is:.
+        /// </summary>
+        internal static string settingsPageCalories {
+            get {
+                return ResourceManager.GetString("settingsPageCalories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Settings.
+        /// </summary>
+        internal static string settingsPageTitle {
+            get {
+                return ResourceManager.GetString("settingsPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu You weigh.
+        /// </summary>
+        internal static string settingsPageWeight {
+            get {
+                return ResourceManager.GetString("settingsPageWeight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu ADD.
+        /// </summary>
+        internal static string waterChangeBtn {
+            get {
+                return ResourceManager.GetString("waterChangeBtn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu WATER.
+        /// </summary>
+        internal static string waterText {
+            get {
+                return ResourceManager.GetString("waterText", resourceCulture);
             }
         }
     }

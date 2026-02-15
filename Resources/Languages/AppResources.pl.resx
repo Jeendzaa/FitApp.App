@@ -198,4 +198,52 @@
   <data name="mainPageFat" xml:space="preserve">
     <value>tłuszcze</value>
   </data>
+  <data name="waterText" xml:space="preserve">
+    <value>WODA</value>
+  </data>
+  <data name="waterChangeBtn" xml:space="preserve">
+    <value>DODAJ</value>
+  </data>
+  <data name="mainPageMeals" xml:space="preserve">
+    <value>POSIŁKI</value>
+  </data>
+  <data name="mealPageQuantity" xml:space="preserve">
+    <value>Ilość</value>
+  </data>
+  <data name="mealPageCalories" xml:space="preserve">
+    <value>Kalorie</value>
+  </data>
+  <data name="changeWaterInfo" xml:space="preserve">
+    <value>Podaj ilość wody w mililitrach</value>
+  </data>
+  <data name="mealPageBack" xml:space="preserve">
+    <value>COFNIJ</value>
+  </data>
+  <data name="mealPageSearchMeal" xml:space="preserve">
+    <value>Wyszukaj posiłki...</value>
+  </data>
+  <data name="mealPageHowManyText" xml:space="preserve">
+    <value>Ile porcji</value>
+  </data>
+  <data name="mealPageAddMealSucces" xml:space="preserve">
+    <value>Udało się</value>
+  </data>
+  <data name="mealPageAddMealSuccesAdded" xml:space="preserve">
+    <value>Posiłek dodany</value>
+  </data>
+  <data name="settingsPageTitle" xml:space="preserve">
+    <value>Ustawienia</value>
+  </data>
+  <data name="settingsPageCalories" xml:space="preserve">
+    <value>Twój cel kaloryczny to:</value>
+  </data>
+  <data name="logout" xml:space="preserve">
+    <value>wyloguj</value>
+  </data>
+  <data name="settingsPageWeight" xml:space="preserve">
+    <value>Ważysz</value>
+  </data>
+  <data name="changeWeightButton" xml:space="preserve">
+    <value>Zmień wagę</value>
+  </data>
 </root>

@@ -5,7 +5,7 @@
              xmlns:res="clr-namespace:FitApp.App.Resources.Languages"
              NavigationPage.HasNavigationBar="False"
              Title="MainPage">
-
+    
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
             <GradientStop Color="#00AAFF" Offset="0.0"/>
@@ -13,30 +13,54 @@
         </LinearGradientBrush>
     </ContentPage.Background>
 
+    <ScrollView>
+    
     <VerticalStackLayout>
+            <Label
+                FontSize="50"
+                TextColor="#FFF"
+                FontFamily="JaroRegular"
+                Margin="15,15,0,0">
 
-        <Label
-            FontSize="50"
-            TextColor="#FFF"
-            FontFamily="JaroRegular"
-            Margin="15,15,0,0">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenSettingsPageCommand}" />
+                </Label.GestureRecognizers>
 
-            <Label.Text>
-                <MultiBinding StringFormat="{}{0} {1}">
-                    <Binding Source="{x:Static res:AppResources.mainPageHello}"/>
-                    <Binding Path="UserName"/>
-                </MultiBinding>
-            </Label.Text>
+                <Label.Text>
+                    <MultiBinding StringFormat="{}{0} {1}">
+                        <Binding Source="{x:Static res:AppResources.mainPageHello}"/>
+                        <Binding Path="UserName"/>
+                    </MultiBinding>
+                </Label.Text>
 
-            <Label.Shadow>
-                <Shadow Brush="Black"
+                <Label.Shadow>
+                    <Shadow Brush="Black"
                         Offset="0,5"
                         Radius="3"
                         Opacity="0.6"/>
-            </Label.Shadow>
-        </Label>
+                </Label.Shadow>
+            </Label>
 
-        <Border
+
+            <Label
+                Text="{Binding ActualDailyDate}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="25"
+                FontFamily="JaroRegular"
+                TextColor="LightGray"
+                Margin="0,30,0,0">
+
+                <Label.Shadow>
+                    <Shadow Brush="Black"
+                        Offset="0,5"
+                        Radius="3"
+                        Opacity="0.6"/>
+                </Label.Shadow>
+
+            </Label>
+
+            <Border
             StrokeThickness="3"
             StrokeShape="RoundRectangle 12"
             Padding="0"
@@ -62,7 +86,6 @@
                     AlignItems="Center"
                     AlignContent="Center">
 
-                    <!-- Calories eaten -->
                     <VerticalStackLayout FlexLayout.Basis="50%" Spacing="2">
                         <Label
                             Text="{Binding CaloriesEaten, StringFormat='{}{0} kcal'}"
@@ -70,15 +93,14 @@
                             FontFamily="JaroRegular"
                             TextColor="#FFF"
                             HorizontalTextAlignment="Center"/>
-                                        <Label
-                            Text="eaten"
+                        <Label
+                            Text="{x:Static res:AppResources.mainPageEaten}"
                             FontSize="14"
                             FontFamily="JaroRegular"
                             TextColor="#CCC"
                             HorizontalTextAlignment="Center"/>
                     </VerticalStackLayout>
 
-                    <!-- Calories left -->
                     <VerticalStackLayout FlexLayout.Basis="50%" Spacing="2">
                         <Label
                             Text="{Binding CaloriesLeft, StringFormat='{}{0} kcal'}"
@@ -86,15 +108,14 @@
                             FontFamily="JaroRegular"
                             TextColor="#FFF"
                             HorizontalTextAlignment="Center"/>
-                                        <Label
-                            Text="left"
+                        <Label
+                            Text="{x:Static res:AppResources.mainPageLeft}"
                             FontSize="14"
                             FontFamily="JaroRegular"
                             TextColor="#CCC"
                             HorizontalTextAlignment="Center"/>
                     </VerticalStackLayout>
 
-                    <!-- Carbs -->
                     <VerticalStackLayout FlexLayout.Basis="33%" Spacing="2">
                         <Label
                             Text="{Binding Carbon, StringFormat='{}{0} g'}"
@@ -102,15 +123,14 @@
                             FontFamily="JaroRegular"
                             TextColor="#FFF"
                             HorizontalTextAlignment="Center"/>
-                                        <Label
-                            Text="carbs"
+                        <Label
+                            Text="{x:Static res:AppResources.mainPageCarbon}"
                             FontSize="13"
                             FontFamily="JaroRegular"
                             TextColor="#CCC"
                             HorizontalTextAlignment="Center"/>
                     </VerticalStackLayout>
 
-                    <!-- Protein -->
                     <VerticalStackLayout FlexLayout.Basis="33%" Spacing="2">
                         <Label
                             Text="{Binding Protein, StringFormat='{}{0} g'}"
@@ -118,15 +138,14 @@
                             FontFamily="JaroRegular"
                             TextColor="#FFF"
                             HorizontalTextAlignment="Center"/>
-                                        <Label
-                            Text="protein"
+                        <Label
+                            Text="{x:Static res:AppResources.mainPageProtein}"
                             FontSize="13"
                             FontFamily="JaroRegular"
                             TextColor="#CCC"
                             HorizontalTextAlignment="Center"/>
                     </VerticalStackLayout>
 
-                    <!-- Fat -->
                     <VerticalStackLayout FlexLayout.Basis="33%" Spacing="2">
                         <Label
                             Text="{Binding Fat, StringFormat='{}{0} g'}"
@@ -134,8 +153,8 @@
                             FontFamily="JaroRegular"
                             TextColor="#FFF"
                             HorizontalTextAlignment="Center"/>
-                                        <Label
-                            Text="fat"
+                        <Label
+                            Text="{x:Static res:AppResources.mainPageFat}"
                             FontSize="13"
                             FontFamily="JaroRegular"
                             TextColor="#CCC"
@@ -147,8 +166,177 @@
             </Border>
         </Border>
 
-        <Button Text="logout"            
-                Clicked="OnLogoutClicked"/>
+        <Border
+            StrokeThickness="3"
+            StrokeShape="RoundRectangle 12"
+            Padding="0"
+            Margin="50,20,50,0">
+
+            <Border.Stroke>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#034067" Offset="0.0"/>
+                    <GradientStop Color="#5B9EFF" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Stroke>
+
+            <Border
+                BackgroundColor="#0162F4"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 12"
+                Padding="5">
+
+                <VerticalStackLayout Margin="10,10,10,0" Spacing="10">
+
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label
+                            Text="{x:Static res:AppResources.mainPageMeals}"
+                            FontFamily="JaroRegular"
+                            FontSize="20"
+                            TextColor="White"
+                            VerticalOptions="Center" />
+
+                        <Image
+                            Source="add_btn.svg"
+                            WidthRequest="30"
+                            HeightRequest="30"
+                            Grid.Column="1">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenMealsPageCommand}" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+
+                    <CollectionView ItemsSource="{Binding Meals}">
+                        <CollectionView.EmptyView>
+                            <Label
+                                Text="No meals added today"
+                                TextColor="White"
+                                HorizontalOptions="Center"
+                                Margin="0,20,0,0"/>
+                        </CollectionView.EmptyView>
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Padding="10" Margin="0,5" BackgroundColor="#0162F4">
+                                    <VerticalStackLayout>
+                                        <Label
+                                            Text="{Binding MealName}"
+                                            FontFamily="JaroRegular"
+                                            FontSize="18"
+                                            TextColor="White"/>
+
+                                            <Label TextColor="White"
+                                                    FontSize="14">
+                                                <Label.Text>
+                                                    <MultiBinding StringFormat="{}{0}: {1}">
+                                                        <Binding Source="{x:Static res:AppResources.mealPageQuantity}" />
+                                                        <Binding Path="Quantity" />
+                                                    </MultiBinding>
+                                                </Label.Text>
+                                            </Label>
+
+                                            <Label TextColor="White"
+                                                    FontSize="14">
+                                                <Label.Text>
+                                                    <MultiBinding StringFormat="{}{0}: {1}">
+                                                        <Binding Source="{x:Static res:AppResources.mealPageCalories}" />
+                                                        <Binding Path="MealCalories" />
+                                                    </MultiBinding>
+                                                </Label.Text>
+                                            </Label>
+
+                                    </VerticalStackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                </VerticalStackLayout>
+
+            </Border>
+        </Border>
+
+        <Border
+        StrokeThickness="3"
+        StrokeShape="RoundRectangle 12"
+        Padding="0"
+        Margin="50,20,50,40">
+
+            <Border.Stroke>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#034067" Offset="0.0"/>
+                    <GradientStop Color="#5B9EFF" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Stroke>
+
+            <Border
+                BackgroundColor="#0162F4"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 12"
+                Padding="5">
+
+                <VerticalStackLayout Margin="0,15,0,15">
+                    <HorizontalStackLayout Spacing="8" HorizontalOptions="Center">
+                        <Image
+                            Source="water.svg"
+                            HeightRequest="25"
+                            WidthRequest="25"
+                            VerticalOptions="Center"/>
+
+                            <Label
+                                Text="{x:Static res:AppResources.waterText}"
+                                TextColor="#FFF"
+                                FontSize="25"
+                                FontFamily="JaroRegular"
+                                VerticalOptions="Center"/>
+
+                            <Label
+                                Text="{Binding WaterConsumed, StringFormat='{}{0} ml'}"
+                                FontSize="30"
+                                TextColor="#FFF"
+                                FontFamily="JaroRegular"
+                                HorizontalTextAlignment="Center"/>
+
+
+                        </HorizontalStackLayout>
+
+
+
+                    <Border
+                        StrokeThickness="3"
+                        StrokeShape="RoundRectangle 16"
+                        Padding="0"
+                        Margin="70,10,70,0">
+
+                        <Border.Stroke>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                <GradientStop Color="#034067" Offset="0.0"/>
+                                <GradientStop Color="#5B9EFF" Offset="1.0"/>
+                            </LinearGradientBrush>
+                        </Border.Stroke>
+
+                        <Border
+                            BackgroundColor="#002679"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 16">
+
+                            <Button 
+                                Text="{x:Static res:AppResources.waterChangeBtn}"
+                                BackgroundColor="Transparent"
+                                TextColor="White"
+                                FontFamily="JaroRegular"
+                                FontSize="15"
+                                Command="{Binding ChangeWaterCommand}"/>
+                                
+                        </Border>
+                    </Border>
+
+                </VerticalStackLayout>
+            </Border>
+        </Border>
+
+
     </VerticalStackLayout>
-    
+    </ScrollView>
+        
 </ContentPage>
