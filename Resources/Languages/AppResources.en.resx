@@ -198,4 +198,52 @@
   <data name="mainPageFat" xml:space="preserve">
     <value>fat</value>
   </data>
+  <data name="waterText" xml:space="preserve">
+    <value>WATER</value>
+  </data>
+  <data name="waterChangeBtn" xml:space="preserve">
+    <value>ADD</value>
+  </data>
+  <data name="mainPageMeals" xml:space="preserve">
+    <value>MEALS</value>
+  </data>
+  <data name="mealPageQuantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="mealPageCalories" xml:space="preserve">
+    <value>Calories</value>
+  </data>
+  <data name="changeWaterInfo" xml:space="preserve">
+    <value>Enter the amount of water in millilitres.</value>
+  </data>
+  <data name="mealPageBack" xml:space="preserve">
+    <value>BACK</value>
+  </data>
+  <data name="mealPageSearchMeal" xml:space="preserve">
+    <value>Search meals...</value>
+  </data>
+  <data name="mealPageHowManyText" xml:space="preserve">
+    <value>How many portions of</value>
+  </data>
+  <data name="mealPageAddMealSucces" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="mealPageAddMealSuccesAdded" xml:space="preserve">
+    <value>Meal added</value>
+  </data>
+  <data name="settingsPageTitle" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="settingsPageCalories" xml:space="preserve">
+    <value>Your calorie goal is:</value>
+  </data>
+  <data name="logout" xml:space="preserve">
+    <value>logout</value>
+  </data>
+  <data name="settingsPageWeight" xml:space="preserve">
+    <value>You weigh</value>
+  </data>
+  <data name="changeWeightButton" xml:space="preserve">
+    <value>Change weight</value>
+  </data>
 </root>

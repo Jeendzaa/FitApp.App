@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitApp.App.Views.SettingsPage"
+             Title="SettingsPage"
+             xmlns:res="clr-namespace:FitApp.App.Resources.Languages">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#00AAFF" Offset="0.0"/>
+            <GradientStop Color="#003CFF" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout>
+
+        <Border
+            StrokeThickness="3"
+            StrokeShape="RoundRectangle 16"
+            Padding="0"
+            Margin="60,30,60,0">
+
+            <Border.Stroke>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#034067" Offset="0.0"/>
+                    <GradientStop Color="#5B9EFF" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Stroke>
+
+            <Border
+                BackgroundColor="#002679"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 16"
+                Padding="5">
+
+                <Button
+                    Text="{x:Static res:AppResources.mealPageBack}"
+                    Command="{Binding GoBackCommand}"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    FontFamily="JaroRegular"
+                    FontSize="26"
+                    />
+
+            </Border>
+        </Border>
+
+        <Label 
+            Text="{x:Static res:AppResources.settingsPageTitle}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="40"
+            TextColor="#FFF"
+            FontFamily="JaroRegular"
+            Margin="0,15,0,20"/>
+
+        <Label 
+            Text="{Binding UserName}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="30"
+            TextColor="#FFF"
+            FontFamily="JaroRegular"
+            Margin="0,0,0,10"/>
+
+        <Label 
+            Text="{x:Static res:AppResources.settingsPageCalories}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="20"
+            TextColor="#FFF"
+            FontFamily="JaroRegular"
+            Margin="0,0,0,0"/>
+
+        <Label 
+            Text="{Binding Calories}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="30"
+            TextColor="#FFF"
+            FontFamily="JaroRegular"
+            Margin="0,0,0,10"/>
+
+
+        <Label
+           Text="{x:Static res:AppResources.settingsPageWeight}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="20"
+            TextColor="#FFF"
+            FontFamily="JaroRegular"
+            Margin="0,10,0,10"/>
+
+        <Label
+           Text="{Binding UserWeight}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="20"
+            TextColor="#FFF"
+            FontFamily="JaroRegular"
+            Margin="0,0,0,10"/>
+
+
+        <Border
+        StrokeThickness="3"
+        StrokeShape="RoundRectangle 16"
+        Padding="0"
+        Margin="120,0,120,0">
+
+            <Border.Stroke>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#034067" Offset="0.0"/>
+                    <GradientStop Color="#5B9EFF" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Stroke>
+
+            <Border
+                BackgroundColor="#002679"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 16">
+                <Button
+                    Text="{Static res:AppResources.changeWeightButton}"
+                    Command="{Binding ChangeWeightCommand}"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    FontFamily="JaroRegular"/>
+            </Border>
+        </Border>
+
+
+        
+        <Border
+            StrokeThickness="3"
+            StrokeShape="RoundRectangle 16"
+            Padding="0"
+            Margin="60,30,60,0">
+
+            <Border.Stroke>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#034067" Offset="0.0"/>
+                    <GradientStop Color="#5B9EFF" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Stroke>
+
+            <Border
+                BackgroundColor="#002679"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 16"
+                Padding="5">
+                <Button
+                    Text="{x:Static res:AppResources.logout}"
+                    Clicked="OnLogoutClicked"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    FontFamily="JaroRegular"
+                    FontSize="26"
+                    />
+            </Border>
+        </Border>
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

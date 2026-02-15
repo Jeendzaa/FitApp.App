@@ -1,5 +1,6 @@
 ﻿using System.Net.Http.Json;
 using FitApp.App.Models;
+using FitApp.App.Models.DTO;
 
 namespace FitApp.App.Services
 {
@@ -61,6 +62,18 @@ namespace FitApp.App.Services
             return await response.Content.ReadFromJsonAsync<User>();
         }
 
+        public async Task<bool> UpdateWeightAsync(int userId, int newWeight)
+        {
+            var body = new
+            {
+                userId = userId,
+                userCurrentWeight = newWeight
+            };
+
+            var response = await _httpClient.PutAsJsonAsync($"user/id?id={userId}", body);
+
+            return response.IsSuccessStatusCode;
+        }
 
 
     }

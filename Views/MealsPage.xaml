@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitApp.App.Views.MealsPage"
+             xmlns:res="clr-namespace:FitApp.App.Resources.Languages"
+             Title="Meals">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#00AAFF" Offset="0.0"/>
+            <GradientStop Color="#003CFF" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout Padding="15" Spacing="10">
+
+        <Border
+            StrokeThickness="3"
+            StrokeShape="RoundRectangle 16"
+            Padding="0"
+            Margin="60,30,60,0">
+
+            <Border.Stroke>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#034067" Offset="0.0"/>
+                    <GradientStop Color="#5B9EFF" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Stroke>
+
+            <Border
+                BackgroundColor="#002679"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 16"
+                Padding="5">
+
+                <Button
+                    Text="{x:Static res:AppResources.mealPageBack}"
+                    Command="{Binding GoBackCommand}"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    FontFamily="JaroRegular"
+                    FontSize="26"
+                    />
+                
+            </Border>
+        </Border>
+
+        <Border
+            StrokeThickness="3"
+            StrokeShape="RoundRectangle 12"
+            Padding="0"
+            Margin="0,60,0,0">
+
+            <Border.Stroke>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#034067" Offset="0.0"/>
+                    <GradientStop Color="#5B9EFF" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Stroke>
+
+            <Border
+                BackgroundColor="#0162F4"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 12"
+                Padding="5">
+                <SearchBar
+                    Text="{Binding SearchText}"
+                    SearchCommand="{Binding SearchMealsCommand}"
+                    TextColor="#FFF"
+                    PlaceholderColor="#FFF"
+                    Placeholder="{x:Static res:AppResources.mealPageSearchMeal}"/>
+            </Border>
+        </Border>
+
+        <CollectionView ItemsSource="{Binding Meals}"
+                        SelectionMode="None">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*,Auto" Padding="5">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding MealName}"
+                                   FontSize="18" />
+                            <Label Text="{Binding MealCalories, StringFormat='{}{0} kcal'}"
+                                   FontSize="14" />
+                        </VerticalStackLayout>
+
+                        <Button Grid.Column="1"
+                                Text="+"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.AddMealCommand}"
+                                CommandParameter="{Binding .}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </VerticalStackLayout>
+</ContentPage>

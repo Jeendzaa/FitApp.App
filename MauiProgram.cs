@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using FitApp.App.Views;
 using FitApp.App.ViewModels;
+using CommunityToolkit.Maui;
 
 namespace FitApp.App
 {
@@ -17,7 +18,8 @@ namespace FitApp.App
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                     fonts.AddFont("JaroRegular.ttf", "JaroRegular");
-                });
+                })
+                .UseMauiCommunityToolkit();
 
             builder.Services.AddHttpClient<UserService>();
             builder.Services.AddHttpClient<DailyService>();
@@ -30,6 +32,13 @@ namespace FitApp.App
             builder.Services.AddSingleton<LoginPage>();
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton<RegisterPage>();
+
+            builder.Services.AddSingleton<MealService>();
+            builder.Services.AddSingleton<MealEntryService>();
+            builder.Services.AddTransient<MealsPageViewModel>();
+            builder.Services.AddTransient<MealsPage>();
+            builder.Services.AddTransient<SettingsPageViewModel>();
+            builder.Services.AddTransient<SettingsPage>();
 
 
 #if DEBUG

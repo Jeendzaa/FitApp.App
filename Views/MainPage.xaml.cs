@@ -9,22 +9,16 @@ public partial class MainPage : ContentPage
         BindingContext = vm;
     }
 
-    private async void OnLogoutClicked(object sender, EventArgs e)
-    {
-        Preferences.Remove("UserId");
-        Preferences.Remove("UserName");
-        Preferences.Remove("UserEmail");
-        Preferences.Remove("IsLoggedIn");
 
-        await Shell.Current.GoToAsync("//LoginPage");
-    }
 
-    protected override void OnAppearing()
+    protected override async void OnAppearing()
     {
         base.OnAppearing();
 
         if (BindingContext is MainPageViewModel vm)
-            vm.LoadCommand.Execute(null);
+        {
+            await vm.LoadAsync();
+        }
     }
 }
 
