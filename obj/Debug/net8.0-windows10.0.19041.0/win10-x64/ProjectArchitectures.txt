@@ -1,0 +1,1 @@
+C:\Users\rojje\Documents\inz\FitApp.App\FitApp.App.csproj;x64

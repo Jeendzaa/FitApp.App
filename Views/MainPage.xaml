@@ -16,31 +16,45 @@
     <ScrollView>
     
     <VerticalStackLayout>
-            <Label
-                FontSize="50"
-                TextColor="#FFF"
-                FontFamily="JaroRegular"
-                Margin="15,15,0,0">
+            <Grid Margin="15,15,15,0" ColumnDefinitions="*,Auto">
 
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding OpenSettingsPageCommand}" />
-                </Label.GestureRecognizers>
+                <Label
+                    Grid.Column="0"
+                    FontSize="50"
+                    TextColor="#FFF"
+                    FontFamily="JaroRegular">
 
-                <Label.Text>
-                    <MultiBinding StringFormat="{}{0} {1}">
-                        <Binding Source="{x:Static res:AppResources.mainPageHello}"/>
-                        <Binding Path="UserName"/>
-                    </MultiBinding>
-                </Label.Text>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OpenSettingsPageCommand}" />
+                    </Label.GestureRecognizers>
 
-                <Label.Shadow>
-                    <Shadow Brush="Black"
-                        Offset="0,5"
-                        Radius="3"
-                        Opacity="0.6"/>
-                </Label.Shadow>
-            </Label>
+                    <Label.Text>
+                        <MultiBinding StringFormat="{}{0} {1}">
+                            <Binding Source="{x:Static res:AppResources.mainPageHello}"/>
+                            <Binding Path="UserName"/>
+                        </MultiBinding>
+                    </Label.Text>
 
+                    <Label.Shadow>
+                        <Shadow Brush="Black"
+                    Offset="0,5"
+                    Radius="3"
+                    Opacity="0.6"/>
+                    </Label.Shadow>
+                </Label>
+
+                <Image
+                    Grid.Column="1"
+                    Source="calendar.svg"
+                    HeightRequest="35"
+                    WidthRequest="35"
+                    VerticalOptions="Center">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OpenCalendarCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+            </Grid>
 
             <Label
                 Text="{Binding ActualDailyDate}"

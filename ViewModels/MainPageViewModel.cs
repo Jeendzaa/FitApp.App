@@ -1,10 +1,12 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Maui.Views;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using FitApp.App.Models;
 using FitApp.App.Models.DTO;
 using FitApp.App.Resources.Languages;
 using FitApp.App.Services;
 using FitApp.App.Views;
+using FitApp.App.Views.Popups;
 using System.Collections.ObjectModel;
 using System.Globalization;
 
@@ -38,7 +40,9 @@ namespace FitApp.App.ViewModels
         [ObservableProperty] private bool isBusy;
         [ObservableProperty] private string userName = string.Empty;
 
-        [ObservableProperty] private string actualDailyDate = string.Empty;
+        [ObservableProperty] private DateTime selectedDate = DateTime.UtcNow.Date;
+        [ObservableProperty] private string actualDailyDate = DateTime.UtcNow.Date.ToString("dd.MM.yyyy");
+
 
         public IAsyncRelayCommand LoadCommand { get; }
 
@@ -47,59 +51,11 @@ namespace FitApp.App.ViewModels
 
         public async Task LoadAsync()
         {
-            IsBusy = true;
-
-            try
-            {
-                UserName = Preferences.Get("UserName", string.Empty);
-
-                var userId = Preferences.Get("UserId", 0);
-                if (userId == 0)
-                    return;
-
-                var today = DateTime.UtcNow.Date;
-
-                ActualDailyDate = today.ToString("dd.MM.yyyy");
-
-                var user = await _userService.GetUserByIdAsync(userId);
-                if (user == null)
-                    return;
-
-                var daily = await _dailyService.GetDailyByDateAsync(userId, today);
-
-                if (daily == null)
-                {
-                    var createdId = await _dailyService.CreateDailyAsync(userId, today);
-                    if (createdId == null)
-                        return;
-
-                    daily = await _dailyService.GetDailyByDateAsync(userId, today);
-                    if (daily == null)
-                        return;
-                }
-
-                CaloriesEaten = daily.Calories;
-                Protein = daily.Protein ?? 0;
-                Carbon = daily.Carbon ?? 0;
-                Fat = daily.Fat ?? 0;
-
-                CaloriesLeft = user.DailyCalorieGoal - CaloriesEaten;
-                if (CaloriesLeft < 0)
-                    CaloriesLeft = 0;
-
-                WaterConsumed = daily.Water ?? 0;
-
-                Meals.Clear();
-                foreach (var meal in daily.Meals ?? new List<MealEntryDto>())
-                {
-                    Meals.Add(meal);
-                }
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+            var today = DateTime.UtcNow.Date;
+            SelectedDate = today;
+            await LoadForSelectedDate(today);
         }
+
 
         [RelayCommand]
         private async Task ChangeWater()
@@ -111,9 +67,9 @@ namespace FitApp.App.ViewModels
             if (userId == 0)
                 return;
 
-            var today = DateTime.UtcNow.Date;
+            var date = SelectedDate.Date;
 
-            var daily = await _dailyService.GetDailyByDateAsync(userId, today);
+            var daily = await _dailyService.GetDailyByDateAsync(userId, date);
             if (daily == null)
                 return;
 
@@ -147,9 +103,82 @@ namespace FitApp.App.ViewModels
         [RelayCommand]
         private async Task OpenMealsPage()
         {
-            Console.WriteLine("KULTURA " + CultureInfo.CurrentUICulture.Name);
+            await Shell.Current.GoToAsync(
+                $"{nameof(MealsPage)}?date={SelectedDate:yyyy-MM-dd}");
+        }
 
-            await Shell.Current.GoToAsync(nameof(MealsPage));
+        [RelayCommand]
+        private async Task OpenCalendar()
+        {
+            var popup = new CalendarPopup();
+
+            var result = await Application.Current.MainPage.ShowPopupAsync(popup);
+
+            if (result is DateTime pickedDate)
+            {
+                SelectedDate = pickedDate;
+                ActualDailyDate = pickedDate.ToString("dd.MM.yyyy");
+
+                await LoadForSelectedDate(pickedDate);
+            }
+        }
+
+        public async Task LoadForSelectedDate(DateTime date)
+        {
+            if (IsBusy)
+                return;
+
+            IsBusy = true;
+
+            try
+            {
+                UserName = Preferences.Get("UserName", string.Empty);
+
+                var userId = Preferences.Get("UserId", 0);
+                if (userId == 0)
+                    return;
+
+                SelectedDate = date.Date;
+                ActualDailyDate = SelectedDate.ToString("dd.MM.yyyy");
+
+                var user = await _userService.GetUserByIdAsync(userId);
+                if (user == null)
+                    return;
+
+                var daily = await _dailyService.GetDailyByDateAsync(userId, SelectedDate);
+
+                if (daily == null)
+                {
+                    var createdId = await _dailyService.CreateDailyAsync(userId, SelectedDate);
+                    if (createdId == null)
+                        return;
+
+                    daily = await _dailyService.GetDailyByDateAsync(userId, SelectedDate);
+                    if (daily == null)
+                        return;
+                }
+
+                CaloriesEaten = daily.Calories;
+                Protein = daily.Protein ?? 0;
+                Carbon = daily.Carbon ?? 0;
+                Fat = daily.Fat ?? 0;
+
+                CaloriesLeft = user.DailyCalorieGoal - CaloriesEaten;
+                if (CaloriesLeft < 0)
+                    CaloriesLeft = 0;
+
+                WaterConsumed = daily.Water ?? 0;
+
+                Meals.Clear();
+                foreach (var meal in daily.Meals ?? new List<MealEntryDto>())
+                {
+                    Meals.Add(meal);
+                }
+            }
+            finally
+            {
+                IsBusy = false;
+            }
         }
 
     }

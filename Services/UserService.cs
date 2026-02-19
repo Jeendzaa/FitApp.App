@@ -62,15 +62,11 @@ namespace FitApp.App.Services
             return await response.Content.ReadFromJsonAsync<User>();
         }
 
-        public async Task<bool> UpdateWeightAsync(int userId, int newWeight)
+        public async Task<bool> UpdateWeightAsync(int userId, int weight)
         {
-            var body = new
-            {
-                userId = userId,
-                userCurrentWeight = newWeight
-            };
-
-            var response = await _httpClient.PutAsJsonAsync($"user/id?id={userId}", body);
+            var response = await _httpClient.PutAsJsonAsync(
+                $"user/{userId}/weight",
+                weight);
 
             return response.IsSuccessStatusCode;
         }
