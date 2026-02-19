@@ -272,6 +272,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:FitApp.App.ViewModels.MainPageViewModel.Meals">
             <inheritdoc cref="F:FitApp.App.ViewModels.MainPageViewModel.meals"/>
@@ -300,6 +301,9 @@
         <member name="P:FitApp.App.ViewModels.MainPageViewModel.UserName">
             <inheritdoc cref="F:FitApp.App.ViewModels.MainPageViewModel.userName"/>
         </member>
+        <member name="P:FitApp.App.ViewModels.MainPageViewModel.SelectedDate">
+            <inheritdoc cref="F:FitApp.App.ViewModels.MainPageViewModel.selectedDate"/>
+        </member>
         <member name="P:FitApp.App.ViewModels.MainPageViewModel.ActualDailyDate">
             <inheritdoc cref="F:FitApp.App.ViewModels.MainPageViewModel.actualDailyDate"/>
         </member>
@@ -324,13 +328,26 @@
         <member name="P:FitApp.App.ViewModels.MainPageViewModel.OpenMealsPageCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FitApp.App.ViewModels.MainPageViewModel.OpenMealsPage"/>.</summary>
         </member>
+        <member name="F:FitApp.App.ViewModels.MainPageViewModel.openCalendarCommand">
+            <summary>The backing field for <see cref="P:FitApp.App.ViewModels.MainPageViewModel.OpenCalendarCommand"/>.</summary>
+        </member>
+        <member name="P:FitApp.App.ViewModels.MainPageViewModel.OpenCalendarCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FitApp.App.ViewModels.MainPageViewModel.OpenCalendar"/>.</summary>
+        </member>
         <member name="T:FitApp.App.ViewModels.MealsPageViewModel">
+            <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
         </member>
         <member name="P:FitApp.App.ViewModels.MealsPageViewModel.SearchText">
             <inheritdoc cref="F:FitApp.App.ViewModels.MealsPageViewModel.searchText"/>
+        </member>
+        <member name="F:FitApp.App.ViewModels.MealsPageViewModel.goBackCommand">
+            <summary>The backing field for <see cref="P:FitApp.App.ViewModels.MealsPageViewModel.GoBackCommand"/>.</summary>
+        </member>
+        <member name="P:FitApp.App.ViewModels.MealsPageViewModel.GoBackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:FitApp.App.ViewModels.MealsPageViewModel.GoBack"/>.</summary>
         </member>
         <member name="F:FitApp.App.ViewModels.MealsPageViewModel.searchMealsCommand">
             <summary>The backing field for <see cref="P:FitApp.App.ViewModels.MealsPageViewModel.SearchMealsCommand"/>.</summary>
@@ -570,6 +587,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserName">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserName" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedDate" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ActualDailyDate">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ActualDailyDate" generated properties.</summary>
         </member>
@@ -638,6 +658,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserName">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedDate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedDate" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ActualDailyDate">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ActualDailyDate" generated properties.</summary>

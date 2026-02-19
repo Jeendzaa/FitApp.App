@@ -7,11 +7,19 @@ using System.Collections.ObjectModel;
 
 namespace FitApp.App.ViewModels
 {
+    [QueryProperty(nameof(DateString), "date")]
     public partial class MealsPageViewModel : ObservableObject
     {
         private readonly MealService _mealService;
         private readonly MealEntryService _mealEntryService;
         private readonly DailyService _dailyService;
+
+        public string DateString { get; set; }
+
+        private DateTime SelectedDate =>
+            DateTime.TryParse(DateString, out var d)
+                ? d
+                : DateTime.UtcNow.Date;
 
         [ObservableProperty]
         private string searchText = string.Empty;
@@ -26,6 +34,12 @@ namespace FitApp.App.ViewModels
             _mealService = mealService;
             _mealEntryService = mealEntryService;
             _dailyService = dailyService;
+        }
+
+            [RelayCommand]
+        private async Task GoBack()
+        {
+            await Shell.Current.GoToAsync("..");
         }
 
         [RelayCommand]
@@ -48,20 +62,19 @@ namespace FitApp.App.ViewModels
             if (userId == 0)
                 return;
 
-            var today = DateTime.UtcNow.Date;
-
-            var daily = await _dailyService.GetDailyByDateAsync(userId, today);
+            var date = SelectedDate;
+            var daily = await _dailyService.GetDailyByDateAsync(userId, date);
 
             if (daily == null)
             {
-                var createdId = await _dailyService.CreateDailyAsync(userId, today);
+                var createdId = await _dailyService.CreateDailyAsync(userId, date);
                 if (createdId == null)
                 {
                     await Application.Current.MainPage.DisplayAlert("Error", "Cannot create daily report", "OK");
                     return;
                 }
 
-                daily = await _dailyService.GetDailyByDateAsync(userId, today);
+                daily = await _dailyService.GetDailyByDateAsync(userId, date);
                 if (daily == null)
                 {
                     await Application.Current.MainPage.DisplayAlert("Error", "Daily still null after creation", "OK");
@@ -88,9 +101,5 @@ namespace FitApp.App.ViewModels
 
             await Application.Current.MainPage.DisplayAlert(AppResources.mealPageAddMealSucces, AppResources.mealPageAddMealSuccesAdded, "OK");
         }
-
-
-
-
     }
 }

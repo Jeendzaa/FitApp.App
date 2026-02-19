@@ -39,9 +39,6 @@ namespace FitApp.App.ViewModels
         [RelayCommand]
         private async Task ChangeWeight()
         {
-            if (IsBusy)
-                return;
-
             var userId = Preferences.Get("UserId", 0);
             if (userId == 0)
                 return;
@@ -49,20 +46,19 @@ namespace FitApp.App.ViewModels
             string? input = await Application.Current.MainPage.DisplayPromptAsync(
                 "Weight",
                 "Podaj nową wagę (kg):",
-                initialValue: UserWeight.ToString(),
                 keyboard: Keyboard.Numeric);
 
             if (string.IsNullOrWhiteSpace(input))
                 return;
 
-            if (!int.TryParse(input, out int newWeight) || newWeight <= 0)
+            if (!int.TryParse(input, out int weight) || weight <= 0)
                 return;
 
-            var success = await _userService.UpdateWeightAsync(userId, newWeight);
+            var success = await _userService.UpdateWeightAsync(userId, weight);
             if (!success)
                 return;
 
-            UserWeight = newWeight;
+            UserWeight = weight;
         }
 
 
